@@ -1,6 +1,6 @@
 import Images from "../img/Images";
 import FormInput from "../components/FormInput";
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Dummy from "./Dummy";
 import SwitchImage from "./SwitchImage";
 const Home = () => {
@@ -70,7 +70,9 @@ const Home = () => {
         <img src={Images.notification} className="notif" alt="notification" />
         <br />
         <span>
-          eshibobo {/* <img src={values.image} className="man" alt="person" /> */} <SwitchImage image={values.image} />
+          eshibobo{" "}
+          {/* <img src={values.image} className="man" alt="person" /> */}{" "}
+          <SwitchImage image={values.image} />
         </span>
       </div>
 
