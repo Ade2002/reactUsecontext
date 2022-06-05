@@ -1,6 +1,6 @@
 import Images from "../img/Images";
 import FormInput from "../components/FormInput";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Dummy from "./Dummy";
 import SwitchImage from "./SwitchImage";
 const Home = () => {
