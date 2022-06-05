@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Images from "../img/Images";
-
-const Values = () => {
+import { swapImage } from "./Home";
+export default function Values() {
   const [values, setValues] = useState({
     fullname: "",
     email: "",
@@ -9,12 +9,6 @@ const Values = () => {
     phonenumber: "",
     image: Images.person,
   });
-  const ref = useRef();
-  const swapImage = (e) => {
-    let newImage = URL.createObjectURL(e.target.files[0]) || Images.person;
-    ref.current.src = newImage;
-    setValues({ ...values, image: newImage });
-  };
-};
 
-export default Values;
+  return <img src={swapImage.image} className="man" alt="person" />;
+}
