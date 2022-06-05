@@ -2,7 +2,7 @@ import Images from "../img/Images";
 import FormInput from "../components/FormInput";
 import { useState, useRef } from "react";
 import Dummy from "./Dummy";
-
+import SwitchImage from "./SwitchImage";
 const Home = () => {
   const [values, setValues] = useState({
     fullname: "",
@@ -70,7 +70,7 @@ const Home = () => {
         <img src={Images.notification} className="notif" alt="notification" />
         <br />
         <span>
-          eshibobo <img src={values.image} className="man" alt="person" />
+          eshibobo {/* <img src={values.image} className="man" alt="person" /> */} <SwitchImage image={values.image} />
         </span>
       </div>
 
