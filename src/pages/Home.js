@@ -80,8 +80,6 @@ const Home = () => {
             <img src={values.image} ref={ref} className="man" alt="person" />
             <img src={Images.pencil} className="pencil" alt="pencil" />
           </label>
-          {/* <ProflePictureLabel /> */}
-          {/* <SwitchImage src ={values.image} /> */}
           <form onSubmit={handleSubmit}>
             {inputs.map((input) => (
               <FormInput
