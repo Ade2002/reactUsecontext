@@ -55,16 +55,6 @@ const Home = () => {
     e.preventDefault();
   };
 
-  /* const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  }; */
-  /*   const swapImage = (e) => {
-    let newImage = URL.createObjectURL(e.target.files[0]) || Images.person;
-    const ref = useRef();
-    ref.current.src = newImage;
-    setValues({ ...values, image: newImage });
-  }; */
-
   return (
     <div className="home">
       <div className="header">
