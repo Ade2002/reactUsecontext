@@ -63,7 +63,6 @@ const Home = () => {
         <br />
         <span>
           eshibobo{" "}
-          {/* <img src={values.image} className="man" alt="person" /> */}{" "}
           <SwitchImage />
         </span>
       </div>
