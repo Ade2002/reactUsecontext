@@ -44,18 +44,6 @@ export const ProflePictureLabel = ({ children }) => {
         <imageChangeContext.Provider value={onChange}>
           <imageRefContext.Provider value={ref}>
             {children}
-            {/* <label htmlFor="image">
-      <input
-      type="file"
-      id="image"
-      style={{ display: "none" }}
-      onChange={swapImage}
-      accept=".png, .jpg, .jpeg, .svg"
-      />
-      <img src={values.image} ref={ref} className="man" alt="person" />
-      <img src={Images.pencil} className="pencil" alt="pencil" />
-      </label>  
-    import { themeprovider } from './themecontext*/}
           </imageRefContext.Provider>
         </imageChangeContext.Provider>
       </imageUpdateContext.Provider>
