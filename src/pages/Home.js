@@ -1,6 +1,6 @@
 import Images from "../img/Images";
 import FormInput from "../components/FormInput";
-import React/* , { useRef } */ from "react";
+import React from "react";
 import Dummy from "./Dummy";
 import SwitchImage from "./SwitchImage";
 import {
@@ -10,14 +10,6 @@ import {
   useImageRef,
 } from "./ProflePictureLabel";
 const Home = () => {
-  /* const [values, setValues] = useState({
-    fullname: "",
-    email: "",
-    birthday: "",
-    phonenumber: "",
-    image: Images.person,
-  });
- */
   const values = useImage();
   const swapImage = useImageUpdate();
   const onChange = useImageChange();
