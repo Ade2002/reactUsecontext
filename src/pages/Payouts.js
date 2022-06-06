@@ -1,6 +1,6 @@
 import Images from "../img/Images";
 import Table from "../components/Table";
-
+import SwitchImage from "./SwitchImage";
 
 
 const Payouts = () => <div className="pay">
