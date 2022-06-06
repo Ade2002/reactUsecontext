@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from "../components/Header";
-
+import SwitchImage from "./SwitchImage";
 
 const Settings = () => (
   <div className="charts">
