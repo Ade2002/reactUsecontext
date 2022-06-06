@@ -6,7 +6,6 @@ const Referrals = () => {
   return (
     <div className="charts">
       <Dummy params={"referrals"} />
-      
        <SwitchImage />
     </div>
   );
