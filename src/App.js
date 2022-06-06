@@ -14,20 +14,22 @@ import Charts from "./pages/Charts";
 import Referrals from "./pages/Referrals";
 import Transactions from "./pages/Transactions";
 import Settings from "./pages/Settings";
-
+import { ProflePictureLabel } from "./pages/ProflePictureLabel";
 function App() {
   return (
     <div className="App">
       <Router>
+          <ProflePictureLabel>
         <Routes>
-          <Route path={routes.payouts} element={Default(Payouts)} />
-          <Route path={routes.home} element={Default(Home)} />
-          <Route path={routes.referrals} element={Default(Referrals)} />
-          <Route path={routes.transactions} element={Default(Transactions)} />
-          <Route path={routes.settings} element={Default(Settings)} />
-          <Route path={routes.charts} element={Default(Charts)} />
-          <Route path={routes.settings} element={<Default />} />
+            <Route path={routes.payouts} element={Default(Payouts)} />
+            <Route path={routes.home} element={Default(Home)} />
+            <Route path={routes.referrals} element={Default(Referrals)} />
+            <Route path={routes.transactions} element={Default(Transactions)} />
+            <Route path={routes.settings} element={Default(Settings)} />
+            <Route path={routes.charts} element={Default(Charts)} />
+            <Route path={routes.settings} element={<Default />} />
         </Routes>
+          </ProflePictureLabel>
       </Router>
     </div>
   );

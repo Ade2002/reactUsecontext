@@ -1,17 +1,27 @@
 import Images from "../img/Images";
 import FormInput from "../components/FormInput";
-import React, { useState, useRef, useEffect } from "react";
+import React/* , { useRef } */ from "react";
 import Dummy from "./Dummy";
 import SwitchImage from "./SwitchImage";
+import {
+  useImage,
+  useImageUpdate,
+  useImageChange,
+  useImageRef,
+} from "./ProflePictureLabel";
 const Home = () => {
-  const [values, setValues] = useState({
+  /* const [values, setValues] = useState({
     fullname: "",
     email: "",
     birthday: "",
     phonenumber: "",
     image: Images.person,
   });
-
+ */
+  const values = useImage();
+  const swapImage = useImageUpdate();
+  const onChange = useImageChange();
+  const ref = useImageRef();
   const inputs = [
     {
       id: 1,
@@ -53,15 +63,15 @@ const Home = () => {
     e.preventDefault();
   };
 
-  const ref = useRef();
-  const onChange = (e) => {
+  /* const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
-  };
-  const swapImage = (e) => {
+  }; */
+  /*   const swapImage = (e) => {
     let newImage = URL.createObjectURL(e.target.files[0]) || Images.person;
+    const ref = useRef();
     ref.current.src = newImage;
     setValues({ ...values, image: newImage });
-  };
+  }; */
 
   return (
     <div className="home">
@@ -72,10 +82,9 @@ const Home = () => {
         <span>
           eshibobo{" "}
           {/* <img src={values.image} className="man" alt="person" /> */}{" "}
-          <SwitchImage image={values.image} />
+          <SwitchImage />
         </span>
       </div>
-
       <div className="flex">
         <h4>Edit Profile</h4>
         <div>
@@ -90,6 +99,8 @@ const Home = () => {
             <img src={values.image} ref={ref} className="man" alt="person" />
             <img src={Images.pencil} className="pencil" alt="pencil" />
           </label>
+          {/* <ProflePictureLabel /> */}
+          {/* <SwitchImage src ={values.image} /> */}
           <form onSubmit={handleSubmit}>
             {inputs.map((input) => (
               <FormInput
