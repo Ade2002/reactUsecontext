@@ -1,6 +1,5 @@
 import React from "react";
 import Dummy from "./Dummy";
-/* import values from "./Home";
 
 import SwitchImage from "./SwitchImage";
 const Referrals = () => {
